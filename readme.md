@@ -1,6 +1,6 @@
 # dasbob
 
-[dasbob](https://github.com/GroooveBob/DASBOB/raw/main/pic/dasbob.png)
+![alt text](https://github.com/GroooveBob/DASBOB/blob/main/pic/dasbob.png)
 
 DASBOB is a 36-key diodeless split with splay and buzzer.
 
