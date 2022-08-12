@@ -1,12 +1,12 @@
 # dasbob
 
-![dasbob](imgur.com image replace me!)
+[dasbob](https://github.com/GroooveBob/DASBOB/raw/main/pic/dasbob.png)
 
-*A short description of the keyboard/project*
+DASBOB is a 36-key diodeless split with splay and buzzer.
 
 * Keyboard Maintainer: [grooovebob](https://github.com/grooovebob)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: elite c
+* Hardware Availability: https://github.com/GroooveBob/DASBOB
 
 Make example for this keyboard (after setting up your build environment):
 
