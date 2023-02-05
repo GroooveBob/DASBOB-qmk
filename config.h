@@ -7,26 +7,33 @@
 #define MATRIX_COLS 5
 
 #define DIRECT_PINS { \
-    { D5, F5, B7, F4, D3 }, \
-    { B1, C6, F7, D4,  F6}, \
-    { B6, B2, E6, B3, D7 }, \
-    { F0, B5, B4, NO_PIN, NO_PIN } \
+    { GP13, GP28, GP12, GP29, GP0 }, \
+    { GP22, GP14, GP26, GP4,  GP27}, \
+    { GP21, GP23, GP7, GP20, GP6 }, \
+    { GP16, GP9, GP8, NO_PIN, NO_PIN } \
 }
 
 #define DIRECT_PINS_RIGHT {  \
-    { D3, F4, B7, F5, D5 }, \
-    { F6, D4, F7, C6, B1}, \
-    { D7, B3, E6, B2, B6 }, \
-    { B4, B5, F0, NO_PIN, NO_PIN } \
+    { GP0, GP29, GP12, GP28, GP13 }, \
+    { GP27, GP4, GP26, GP14, GP22}, \
+    { GP6, GP20, GP7, GP23, GP21 }, \
+    { GP8, GP9, GP16, NO_PIN, NO_PIN } \
 }
 
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
+/* Serial Config */
 #define USE_SERIAL
-#define SOFT_SERIAL_PIN D2
+#define SERIAL_USART_TX_PIN GP1
 #define MASTER_LEFT
+
+/* I2C Pin mapping */
+//#define I2C1_SDA_PIN GP7
+//#define I2C1_SCL_PIN GP6
+//#define I2C1_CLOCK_SPEED 400000
+//#define I2C_DRIVER I2CD2
 
 // Set the mouse settings to a comfortable speed/accuracy trade-off,
 // assuming a screen refresh rate of 60 Htz or higher
@@ -49,3 +56,16 @@
 #define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
+#define USB_VBUS_PIN 19
+#define AUDIO_PWM_DRIVER PWMD2
+#define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_B
+#define AUDIO_STATE_TIMER GPTD4
+#define AUDIO_PIN GP5
+#ifdef AUDIO_ENABLE
+    #define AUDIO_INIT_DELAY
+    #define AUDIO_CLICKY
+    #define AUDIO_CLICKY_FREQ_RANDOMNESS 1.0f
+    #define STARTUP_SONG SONG(STARTUP_SOUND)
+#endif
+
+#define STARTUP_SOUND E__NOTE(_E6), E__NOTE(_A6), ED_NOTE(_E7),
